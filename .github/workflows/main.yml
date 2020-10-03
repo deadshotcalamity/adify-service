@@ -15,3 +15,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "evening-crag-62279" #Must be unique in Heroku
           heroku_email: "jscho17@student.sdu.dk"
+      - name: Testing
+        run: mvn test -DskipTests=false -Dgroups=slow
