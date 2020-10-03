@@ -14,4 +14,4 @@ jobs:
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "morning-thicket-30971" #Must be unique in Heroku
-          heroku_email: "jscho17@student.sdu.dk"
+          heroku_email: ""
