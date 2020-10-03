@@ -15,3 +15,5 @@ jobs:
           heroku_api_key: ${{secrets.3ae91b65-f969-4c24-a366-073a4a95ce91}}
           heroku_app_name: "safe-tundra-86031" #Must be unique in Heroku
           heroku_email: "jscho17@student.sdu.dk"
+      - name: Tests
+        run: mvn test -DskipTests=false -Dgroups=slow
