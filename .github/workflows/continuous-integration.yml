@@ -17,9 +17,8 @@ jobs:
           fetch-depth: 0
 
       - name: Compile
-        run: mvn install
-      - uses: actions/checkout@v2
         run: |
+        mvn install
         git checkout ${GITHUB_REF#refs/heads/}
         git rebase origin/master
         git branch master
