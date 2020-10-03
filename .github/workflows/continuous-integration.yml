@@ -23,4 +23,7 @@ jobs:
             git branch master
             git push origin master:master
             git push origin :${GITHUB_REF#refs/heads/}
+      - name: Tests
+        run: mvn test -DskipTests=false -Dgroups=fast
+        
        
