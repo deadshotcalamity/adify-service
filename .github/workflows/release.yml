@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  build:
+    runs-on: windows10
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.5.7 # This is the action
+        with:
+          heroku_api_key: ${{0c076d73-5969-4a26-b973-6187c3e3c2e9}}
+          heroku_app_name: "morning-thicket-30971" #Must be unique in Heroku
+          heroku_email: "jscho17@student.sdu.dk"
