@@ -17,10 +17,3 @@ jobs:
           heroku_email: "jscho17@student.sdu.dk"
       - name: Testing
         run: mvn test -DskipTests=false -Dgroups=slow
-      - name: Merge
-        run: |
-            git checkout ${GITHUB_REF#refs/heads/}
-            git rebase origin/release
-            git branch release
-            git push origin release:release
-            git push origin :${GITHUB_REF#refs/heads/}
